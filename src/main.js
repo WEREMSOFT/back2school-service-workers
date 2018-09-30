@@ -11,9 +11,9 @@ window.onRegisterServiceWorkerClick = () => {
 }
 
 
-var workerFor = new Worker('sw_expensive_calcullation.js');
+// var workerFor = new Worker('sw_expensive_calcullation.js');
 
-workerFor.addEventListener('message', evt => {
-    debugger;
-    console.log('evento: ', evt.data);
-})
+// workerFor.addEventListener('message', evt => {
+//     debugger;
+//     console.log('evento: ', evt.data);
+// })
