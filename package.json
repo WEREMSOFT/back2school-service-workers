@@ -1,0 +1,18 @@
+{
+  "name": "back-2-school-service-wrokers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.1.3"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.3"
+  }
+}
