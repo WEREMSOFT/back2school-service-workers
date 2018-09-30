@@ -104,25 +104,44 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   // Override the current require with this new one
   return newRequire;
 })({"main.js":[function(require,module,exports) {
-if (navigator.serviceWorker) {
-    document.write('<h1>SERVICE WORKER SUPPORTED!!</h1>');
-} else {
-    document.write('<h1>SERVICE WORKER NOT SUPPORTED!!</h1>');
-}
+// ################# EVENT LOOP ####################
 
-window.onRegisterServiceWorkerClick = function () {
-    navigator.serviceWorker.register('/sw_cache_pages.js').then(function (reg) {
-        return console.log('service worker registered!!', reg);
-    });
-};
+// setTimeout(() => console.log('timeout done'), 0);
+// console.log('1');
 
-var workerFor = new Worker('/sw_expensive_calcullation.cd419d4e.js');
+// let promise = new Promise((resolve, reject) => {
+//     let promise2 = new Promise((resolve, reject) => resolve(2));
+//     promise2.then(cadorna => {
+//         console.log('CADORNA2', cadorna);
+//         resolve(1);
+//     });
 
-workerFor.addEventListener('message', function (evt) {
-    debugger;
-    console.log('evento: ', evt.data);
-});
-},{"./sw_cache_pages.js":[["sw_cache_pages.js","sw_cache_pages.js"],"sw_cache_pages.map","sw_cache_pages.js"],"./sw_expensive_calcullation.js":[["sw_expensive_calcullation.cd419d4e.js","sw_expensive_calcullation.js"],"sw_expensive_calcullation.cd419d4e.map","sw_expensive_calcullation.js"]}],"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+// });
+// promise.then(cadorna => console.log('promise ', cadorna));
+// console.log('2');
+
+// ################# SERVICE WORKER ####################
+
+// if(navigator.serviceWorker) {
+//     document.write('<h1>SERVICE WORKER SUPPORTED!!</h1>');
+// } else {
+//     document.write('<h1>SERVICE WORKER NOT SUPPORTED!!</h1>');
+// }
+
+// window.onRegisterServiceWorkerClick = () => {
+//     navigator.serviceWorker
+//         .register('sw_cache_pages.js')
+//         .then(reg => console.log('service worker registered!!', reg));
+// }
+
+
+// var workerFor = new Worker('sw_expensive_calcullation.js');
+
+// workerFor.addEventListener('message', evt => {
+//     debugger;
+//     console.log('evento: ', evt.data);
+// })
+},{}],"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -151,7 +170,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '64077' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '55563' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
